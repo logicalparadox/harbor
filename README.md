@@ -1,6 +1,6 @@
 # Harbor
 
-> Find available TCP ports.
+> TCP port availability and assignment utility.
 
 Harbor is a small little tool to find available TCP ports within a given range. It will remember
 what server is assigned to each port, or which ports are unavailable due to system assignment.
