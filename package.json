@@ -1,6 +1,6 @@
 {
   "name": "harbor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TCP port availability and assignment utility.",
   "main": "index.js",
   "scripts": {
