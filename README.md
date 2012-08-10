@@ -1,4 +1,4 @@
-# Harbor
+# Harbor [![Build Status](https://secure.travis-ci.org/logicalparadox/harbor.png?branch=master)](http://travis-ci.org/logicalparadox/harbor)
 
 > TCP port availability and assignment utility.
 
