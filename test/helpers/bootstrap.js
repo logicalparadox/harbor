@@ -4,4 +4,4 @@ var chai = global.chai = require('chai')
 chai.use(chaiSpies);
 
 global.Should = chai.Should();
-global.harbor = require('../..');
+global.Harbor = require('../..');

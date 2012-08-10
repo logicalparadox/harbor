@@ -13,11 +13,11 @@ describe('harbor', function () {
   });
 
   it('has a version', function () {
-    harbor.should.have.property('version');
+    Harbor.should.have.property('version');
   });
 
   describe('when ports available', function () {
-    var finder = new harbor.Harbor(4200, 4205)
+    var finder = Harbor(4200, 4205)
 
     beforeEach(function () {
       finder.removeAllListeners();
@@ -62,7 +62,7 @@ describe('harbor', function () {
   });
 
   describe('when port not available', function () {
-    var finder = new harbor.Harbor(4200, 4200);
+    var finder = Harbor(4200, 4200);
 
     beforeEach(function () {
       finder.removeAllListeners();
