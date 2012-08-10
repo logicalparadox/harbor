@@ -31,10 +31,10 @@ harbor.claim('awesomeness', function (err, port) {
 
 ### Harbor
 
-The primary export is a factor, but you can also create new Harbors manually.
+The primary export is a factory, but you can also create new Harbors manually.
 
 ```js
-var Harbor = require('harbor').Harbor
+var Harbor = require('harbor')
   , harbor = new Harbor(1227, 1337);
 ```
 
@@ -84,14 +84,6 @@ harbor.release('awesomeness');
 
 Get an array of all claimed ports by this harbor interface. Does not include 
 ports that are in use by system services within the harbor range.
-
-## Debugging
-
-Harbor has integrated the fantastic [debug](https://github.com/visionmedia/debug) 
-module to allow for descriptive debugging. When starting any file that requires
-`harbor`, include the `DEBUG` environment variable to get robust CLI output:
-
-    DEBUG=harbor node app.js
 
 ## Tests
 
