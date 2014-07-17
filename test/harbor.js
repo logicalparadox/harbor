@@ -59,6 +59,27 @@ describe('harbor', function () {
       finder.ports.should.not.have.property('http');
     });
 
+    it('can claim a specific port', function (done) {
+      var claim = chai.spy(function (name, port) {
+        name.should.equal('http');
+        port.should.equal(4300);
+      });
+
+      var full = chai.spy();
+
+      finder.on('claim', claim);
+      finder.on('full', full);
+
+      finder.claim('http', 4300, function (err, port) {
+        Should.not.exist(err);
+        port.should.equal(4300);
+        finder.ports.should.have.property('http', 4300);
+        finder.claimed.should.include(4300);
+        claim.should.have.been.called.once;
+        full.should.have.not.been.called();
+        done();
+      });
+    });
   });
 
   describe('when port not available', function () {
