@@ -1,5 +1,5 @@
-var chai = global.chai = require('chai')
-  , chaiSpies = require('chai-spies');
+var chai = global.chai = require('chai');
+var chaiSpies = require('chai-spies');
 
 chai.use(chaiSpies);
 
