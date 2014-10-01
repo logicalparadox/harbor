@@ -1,4 +1,14 @@
 
+0.3.0 / 2014-10-01 
+==================
+
+ * clean up the codes
+ * clean up repo
+ * Merge pull request #1 from mgesmundo/master
+ * Fix: claim method returns an error if the port is not valid
+ * Claim a specific port without try other ports
+ * add tavis badge
+
 0.2.0 / 2012-08-10 
 ==================
 

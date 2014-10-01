@@ -91,7 +91,7 @@ Tests are written in the BDD styles for the [Mocha](http://visionmedia.github.co
 test runner using the `should` assertion interface from [Chai](http://chaijs.com). 
 Running tests is simple:
 
-    make test
+    npm test
 
 ## Contributing
 
@@ -106,7 +106,7 @@ if you are interested in being regular contributor.
 
 (The MIT License)
 
-Copyright (c) 2012 Jake Luer <jake@alogicalparadox.com>
+Copyright (c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
