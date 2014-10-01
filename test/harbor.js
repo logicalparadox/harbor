@@ -12,10 +12,6 @@ describe('harbor', function () {
     serv.close();
   });
 
-  it('has a version', function () {
-    Harbor.should.have.property('version');
-  });
-
   describe('when ports available', function () {
     var finder = Harbor(4200, 4205)
 

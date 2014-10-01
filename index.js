@@ -1,6 +1,6 @@
 /*!
  * Harbor
- * Copyright (c) 2012 Jake Luer <jake@alogicalparadox.com>
+ * Copyright (c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
  * MIT Licensed
  */
 
@@ -8,9 +8,9 @@
  * External module dependencies
  */
 
-var EventEmitter = require('events').EventEmitter
-  , net = require('net')
-  , util = require('util');
+var EventEmitter = require('events').EventEmitter;
+var inherits = require('util').inherits;
+var net = require('net');
 
 /*!
  * Primary export - factory
@@ -38,10 +38,7 @@ module.exports = Harbor;
  */
 
 function Harbor (min, max) {
-  if (!(this instanceof Harbor)) {
-    return new Harbor(min, max);
-  }
-
+  if (!(this instanceof Harbor)) return new Harbor(min, max);
   EventEmitter.call(this);
   this.ports = {};
   this.min = min || 2000;
@@ -49,16 +46,10 @@ function Harbor (min, max) {
 }
 
 /*!
- * Module Version
- */
-
-Harbor.version = '0.2.0';
-
-/*!
  * Inherits from EventEmitter
  */
 
-util.inherits(Harbor, EventEmitter);
+inherits(Harbor, EventEmitter);
 
 /**
  * ### .claimed
@@ -70,18 +61,18 @@ util.inherits(Harbor, EventEmitter);
  * @api public
  */
 
-Object.defineProperty(Harbor.prototype, 'claimed',
-  { get: function () {
-      var claimed = []
-        , keys = Object.keys(this.ports)
-        , ports = this.ports;
+Object.defineProperty(Harbor.prototype, 'claimed', {
+  get: function () {
+    var claimed = [];
+    var keys = Object.keys(this.ports);
+    var ports = this.ports;
 
-      keys.forEach(function (name) {
-        claimed.push(ports[name]);
-      });
+    keys.forEach(function (name) {
+      claimed.push(ports[name]);
+    });
 
-      return claimed;
-    }
+    return claimed;
+  }
 });
 
 /**
