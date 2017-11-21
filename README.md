@@ -87,7 +87,7 @@ ports that are in use by system services within the harbor range.
 
 ## Tests
 
-Tests are written in the BDD styles for the [Mocha](http://visionmedia.github.com/mocha) 
+Tests are written in the BDD styles for the [Mocha](http://mochajs.org/) 
 test runner using the `should` assertion interface from [Chai](http://chaijs.com). 
 Running tests is simple:
 
